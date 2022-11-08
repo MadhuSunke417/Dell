@@ -56,7 +56,7 @@
             }
            
   $DatebeforeDCURun = Get-Date
-  $DCu = Start-Process -FilePath "$env:ProgramFiles\Dell\CommandUpdate\dcu-cli.exe" -ArgumentList "/applyUpdates -outputLog=`"c:\wbg\logs\dcu.log`"" -PassThru -ErrorAction SilentlyContinue -WindowStyle Hidden -Wait
+  $DCu = Start-Process -FilePath "$env:ProgramFiles\Dell\CommandUpdate\dcu-cli.exe" -ArgumentList "/applyUpdates -outputLog=`"C:\Windows\Logs\dcu.log`"" -PassThru -ErrorAction SilentlyContinue -WindowStyle Hidden -Wait
   
   Write-Output "Exit codes from dcu : $($DCu.ExitCode)"
   #Get description of DCU exit code 
